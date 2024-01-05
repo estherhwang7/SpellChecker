@@ -9,9 +9,7 @@ public class SpellChecker
       private String[] dictionary;
       
       // WRITE Your Methods HERE!
-      public SpellChecker(String[] dictionary) {
-        this.dictionary = dictionary;
-      }
+      
 
       public void print10() {
         int limit = Math.min(10, dictionary.length);
