@@ -9,9 +9,34 @@ public class SpellChecker
       private String[] dictionary;
       
       // WRITE Your Methods HERE!
+      public SpellChecker(String[] dictionary) {
+        this.dictionary = dictionary;
+      }
 
+      public void print10() {
+        int limit = Math.min(10, dictionary.length);
+        for (int i = 0; i < limit; i++) {
+            System.out.print(dictionary[i] + " ");
+        }
+        System.out.println();
+      }
 
-
+      public boolean spellcheck(String word) {
+        for (int i = 0; i < dictionary.length; i++) {
+            if (dictionary[i].equals(word)) {
+                return true;
+            }
+        }
+        return false;
+      }
+      
+      public void printStartsWith(String firstLetters) {
+        for (int i = 0; i < dictionary.length; i++) {
+          if (dictionary[i].startsWith(firstLetters)) {
+              System.out.println(dictionary[i]);
+          }
+        }
+      }
 
 
       public SpellChecker() {
