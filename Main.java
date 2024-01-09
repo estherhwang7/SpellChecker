@@ -2,7 +2,10 @@ import java.util.*;
 
 class Main {
   public static void main(String[] args) {
+<<<<<<< Updated upstream
     //String[] dictionary = {"apple", "banana", "cherry", "date", "fig", "grape", "kiwi", "lemon", "mango", "orange"};
+=======
+>>>>>>> Stashed changes
     SpellChecker checker = new SpellChecker();
     checker.print10();
     checker.printStartsWith("ab");
@@ -17,8 +20,15 @@ class Main {
 
       System.out.print("Enter a word to spell check or q to quit: ");
       word = scan.nextLine();
+<<<<<<< Updated upstream
       } 
       scan.close();
     }
     
   }
+=======
+      }  
+    scan.close();
+  }
+}
+>>>>>>> Stashed changes

@@ -11,31 +11,55 @@ public class SpellChecker
       // WRITE Your Methods HERE!
       
 
-      public void print10() {
+      /*public void print10() {
         int limit = Math.min(10, dictionary.length);
         for (int i = 0; i < limit; i++) {
             System.out.print(dictionary[i] + " ");
         }
         System.out.println();
-      }
+      }*/
+     
+      public void print10() {
+        for (int i = 0; i < 10 && i < dictionary.length; i++) {
+            System.out.print(dictionary[i] + " ");
+        }
+        System.out.println();
+    }
 
-      public boolean spellcheck(String word) {
+
+      /*public boolean spellcheck(String word) {
         for (int i = 0; i < dictionary.length; i++) {
             if (dictionary[i].equals(word)) {
                 return true;
             }
         }
         return false;
-      }
+      }*/
+
+      public boolean spellcheck(String word) {
+        for (String entry : dictionary) {
+            if (entry.equals(word)) {
+                return true;
+            }
+        }
+        return false;
+    }
       
-      public void printStartsWith(String firstLetters) {
+      /*public void printStartsWith(String firstLetters) {
         for (int i = 0; i < dictionary.length; i++) {
           if (dictionary[i].startsWith(firstLetters)) {
               System.out.println(dictionary[i]);
           }
         }
-      }
+      }*/
 
+      public void printStartsWith(String firstLetters) {
+        for (String entry : dictionary) {
+            if (entry.startsWith(firstLetters)) {
+                System.out.println(entry);
+            }
+        }
+    }
 
       public SpellChecker() {
         try
